@@ -1,0 +1,7 @@
+
+
+select CITY.NAME from CITY, COUNTRY
+where CITY.COUNTRYCODE = COUNTRY.CODE
+and COUNTRY.CONTINENT = 'Africa';
+
+
