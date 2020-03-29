@@ -1,8 +1,5 @@
-"""
-Created on Thu Mar 22 13:36:18 2018
 
-@author: Nodar.Okroshiashvili
-"""
+
 
 n = int(input())
 
@@ -16,7 +13,7 @@ def aVeryBigSum(n, ar):
 
 result = aVeryBigSum(n, ar)
 
-#%%
+###
 
 # Second solution
 

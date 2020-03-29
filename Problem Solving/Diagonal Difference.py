@@ -1,8 +1,5 @@
-"""
-Created on Thu Mar 22 11:14:39 2018
 
-@author: Nodar.Okroshiashvili
-"""
+
 
 n = int(input())
 
@@ -21,7 +18,7 @@ def diagonalDifference(a):
 
 diagonalDifference(a)
 
-#%%
+###
 
 # Second Solution using Numpy
 
@@ -42,4 +39,6 @@ def diagonalDifference(a):
     return abs(main_diag_sum - non_main_diag_sum)
 
 diagonalDifference(a)
+
+
 

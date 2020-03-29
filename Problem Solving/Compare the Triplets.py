@@ -1,17 +1,11 @@
-"""
-Created on Wed Mar 14 16:36:09 2018
-
-@author: Nodar.Okroshiashvili
-"""
 
 
-#%%
 
 def solve(a0, a1, a2, b0, b1, b2):
     return  [sum(map(int, [a0 > b0, a1 > b1, a2 > b2])), sum(map(int, [b0 > a0, b1 > a1, b2 > a2]))]
 
 
-#%%
+###
 
 def solve(a0, a1, a2, b0, b1, b2):
     #x = sum([A[0] > B[0], A[1]>B[1], A[2]>B[2]])
@@ -37,7 +31,7 @@ b2 = 7
 solve(1, 2, 3, 4, 5, 6)
 
 
-#%%
+###
 
 
 def solve(a0, a1, a2, b0, b1, b2):
@@ -57,3 +51,4 @@ def solve(a0, a1, a2, b0, b1, b2):
         else:
             bobScore += 1
     return [aliceScore, bobScore]
+

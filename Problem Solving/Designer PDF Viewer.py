@@ -1,8 +1,4 @@
-"""
-Created on Thu Mar 22 14:29:21 2018
 
-@author: Nodar.Okroshiashvili
-"""
 
 
 
@@ -20,5 +16,4 @@ def designerPdfViewer(h, word):
 
 
 result = designerPdfViewer(h, word)
-
 

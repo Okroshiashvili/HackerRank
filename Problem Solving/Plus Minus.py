@@ -1,8 +1,3 @@
-"""
-Created on Thu Mar 15 14:51:50 2018
-
-@author: Nodar.Okroshiashvili
-"""
 
 
 
@@ -14,6 +9,6 @@ def plusminus(arr):
     print(positive, negative, zero, sep="\n")
 
 arr = (1, 2, -3, 0)
-plusminus(arr)
 
+plusminus(arr)
 

@@ -1,8 +1,5 @@
-"""
-Created on Wed May 30 10:22:44 2018
 
-@author: Nodar.Okroshiashvili
-"""
+
 
 
 def staircase(n):

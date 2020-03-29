@@ -1,8 +1,4 @@
-"""
-Created on Wed Mar 21 11:58:31 2018
 
-@author: Nodar.Okroshiashvili
-"""
 
 
 n = int(input().strip())
@@ -17,7 +13,7 @@ pickingNumbers(a)
 
 
 
-#%%
+###
 
 # Second Solution
 
@@ -31,4 +27,3 @@ def pickingNumbers(a):
     return max(a_)
 
 pickingNumbers(a)
-
