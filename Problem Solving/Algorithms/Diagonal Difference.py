@@ -1,44 +1,48 @@
 
 
-
-n = int(input())
-
-a = []
-
-for _ in range(n):
-    a.append(list(map(int, input().rstrip().split())))
+import math
+import os
+import random
+import re
+import sys
 
 
+# Complete the 'diagonalDifference' function below.
 
-def diagonalDifference(a):
-        main_diag = sum(a[i][i] for i in range(n))
-        non_main_diag = sum(a[i][n-i-1] for i in range(n))
-        x = abs(main_diag - non_main_diag)
-        return x
+# The function is expected to return an INTEGER.
+# The function accepts 2D_INTEGER_ARRAY arr as parameter.
 
-diagonalDifference(a)
 
-###
+def diagonalDifference(arr):
+    # Write your code here
+    principal_diagonal = 0
+    secondary_diagonal = 0
 
-# Second Solution using Numpy
-
-n = int(input())
-
-a = []
-
-for _ in range(n):
-    a.append(list(map(int, input().rstrip().split())))
+    for i in range(len(arr)):
+        principal_diagonal += arr[i][i]
+        secondary_diagonal += arr[i][len(arr) - i - 1]
     
+    return abs(principal_diagonal - secondary_diagonal)
     
-def diagonalDifference(a):
-    import numpy as np
-    main_diag_sum = np.trace(a)
-    b = np.asarray(a)
-    b = np.fliplr(b)
-    non_main_diag_sum = np.trace(b)
-    return abs(main_diag_sum - non_main_diag_sum)
 
-diagonalDifference(a)
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    arr = []
+
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    print(arr)
+
+    result = diagonalDifference(arr)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
 
 
 

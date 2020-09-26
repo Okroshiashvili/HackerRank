@@ -1,29 +1,32 @@
 
 
+import math
+import os
+import random
+import re
+import sys
 
-n = int(input().strip())
-a = list(map(int, input().strip().split(' ')))
+#
+# Complete the 'pickingNumbers' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts INTEGER_ARRAY a as parameter.
+#
 
 def pickingNumbers(a):
-    x = max((a.count(i) + a.count(i+1) for i in a))
+    x = max(a.count(i) + a.count(i+1) for i in a)
+
     return x
 
-    
-pickingNumbers(a)
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
+    n = int(input().strip())
 
+    a = list(map(int, input().rstrip().split()))
 
-###
+    result = pickingNumbers(a)
 
-# Second Solution
+    fptr.write(str(result) + '\n')
 
-n = int(input().strip())
-a = list(map(int, input().strip().split(' ')))
-
-
-def pickingNumbers(a):
-    set_ = set(a)  
-    a_ = [a.count(each) + a.count(each+1) for each in set_]
-    return max(a_)
-
-pickingNumbers(a)
+    fptr.close()

@@ -1,19 +1,28 @@
 
 
+import math
+import os
+import random
+import re
+import sys
 
 
-# Put this number in j 1 3 1 3 1 4 1 3 2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 7
-# or whatever you want
-
-h = list(map(int, input().strip().split(' ')))
-word = input().strip()
-
-
+# Complete the designerPdfViewer function below.
 def designerPdfViewer(h, word):
-    letters_heights = [h[ord(i) - 97] for i in word]
-    area = max(letters_heights) * len(letters_heights)
+    letter_heights = [h[ord(i) - 97] for i in word]
+    area = max(letter_heights) * len(letter_heights)
+
     return area
 
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-result = designerPdfViewer(h, word)
+    h = list(map(int, input().rstrip().split()))
 
+    word = input()
+
+    result = designerPdfViewer(h, word)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
